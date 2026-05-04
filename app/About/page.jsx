@@ -15,6 +15,8 @@ export default function About() {
     alignItems: "center",
     textAlign: "center",
     gap: "12px",
+    width: "100%",
+    maxWidth: "350px",
   };
   const imageCard = {
     width: "142px",
@@ -387,7 +389,7 @@ export default function About() {
           <h2 style={{ fontSize: "50px", fontWeight: "semibold", color: "#42A147", marginBottom: "60px", fontFamily: "'Poppins', sans-serif", textAlign: "center" }}>
             Our Speciality
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-16 gap-x-8">
+          <div className="flex flex-wrap justify-center gap-y-16 gap-x-8 mb-16">
             <div style={cardStyle}>
               <div style={imageCard}>
                 <img src="/images/about1.png" alt="" style={imgStyle} />
@@ -412,6 +414,10 @@ export default function About() {
                 Avoid plastics; enjoy safe, hot, home-cooked meals in steel containers.
               </p>
             </div>
+          </div>
+
+          {/* Second Row: 2 Centered Cards */}
+          <div className="flex flex-wrap justify-center gap-y-16 gap-x-8">
             <div style={cardStyle}>
               <div style={imageCard}>
                 <img src="/images/about4.png" alt="" style={imgStyle} />
