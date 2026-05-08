@@ -991,8 +991,31 @@ body {
     color: #ffffff !important;
 }
 
-/* Ensure headings that should be white are white */
+/* --- ULTRA-AGGRESSIVE DARK MODE BACKGROUND FIX --- */
+[data-theme='dark'],
+[data-theme='dark'] body,
+[data-theme='dark'] html,
+[data-theme='dark'] main {
+    background-color: #0f172a !important;
+}
+
+[data-theme='dark'] .bg-white {
+    background-color: #0f172a !important;
+}
+
+[data-theme='dark'] .main-footer-container {
+    background-color: #0f172a !important;
+    margin-top: 0 !important;
+}
+
+[data-theme='dark'] footer {
+    margin-top: 0 !important;
+    background-color: #0f172a !important;
+}
+
+
 [data-theme='dark'] .about-content-section h2,
+
 [data-theme='dark'] #questions h1,
 [data-theme='dark'] #questions h3 {
     color: #ffffff !important;
