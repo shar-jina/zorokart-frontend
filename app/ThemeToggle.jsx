@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 export default function ThemeToggle() {
-    const [theme, setTheme] = useState("dark");
+    const [theme, setTheme] = useState("light");
 
     useEffect(() => {
-        const savedTheme = localStorage.getItem("theme") || "dark";
+        const savedTheme = localStorage.getItem("theme") || "light";
         setTheme(savedTheme);
         document.documentElement.setAttribute("data-theme", savedTheme);
     }, []);
@@ -20,49 +20,53 @@ export default function ThemeToggle() {
         localStorage.setItem("theme", newTheme);
     };
 
+    const buttonStyle = {
+        position: 'fixed',
+        bottom: '110px',
+        left: '30px',
+        width: '65px',
+        height: '65px',
+        backgroundColor: theme === 'light' ? '#1e293b' : '#42A147',
+        color: 'white',
+        borderRadius: '50%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '28px',
+        boxShadow: theme === 'light' 
+            ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+            : '0 10px 30px rgba(0, 0, 0, 0.8)',
+        zIndex: 10001,
+        border: theme === 'light' ? '4px solid #42A147' : '4px solid #ffffff',
+        cursor: 'pointer',
+        transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+        WebkitTapHighlightColor: 'transparent',
+        animation: 'pulse-green 2s infinite'
+    };
+
+
+
+
     return (
-        <button
-            onClick={toggleTheme}
-            className="theme-toggle"
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-        >
-            <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} />
-            <style jsx>{`
-                .theme-toggle {
-                    position: fixed;
-                    bottom: 24px;
-                    left: 24px;
-                    width: 56px;
-                    height: 56px;
-                    background-color: var(--foreground);
-                    color: var(--background);
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 24px;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-                    z-index: 1000;
-                    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s, color 0.3s;
-                    border: none;
-                    cursor: pointer;
+        <>
+            <style dangerouslySetInnerHTML={{ __html: `
+                @keyframes pulse-green {
+                    0% { box-shadow: 0 0 0 0 rgba(66, 161, 71, 0.7); }
+                    70% { box-shadow: 0 0 0 15px rgba(66, 161, 71, 0); }
+                    100% { box-shadow: 0 0 0 0 rgba(66, 161, 71, 0); }
                 }
+            ` }} />
+            <button
+                onClick={toggleTheme}
+                className="theme-toggle-btn"
+                aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+            >
+                <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} />
+            </button>
 
-                .theme-toggle:hover {
-                    transform: scale(1.1);
-                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-                }
-
-                @media (max-width: 768px) {
-                    .theme-toggle {
-                        bottom: 20px;
-                        left: 20px;
-                        width: 48px;
-                        height: 48px;
-                        font-size: 20px;
-                    }
-                }
-            `}</style>
-        </button>
+        </>
     );
 }
+
+
+

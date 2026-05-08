@@ -7,10 +7,14 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes, faHome, faUserPlus, faInfoCircle, faHeadset, faUser, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
+
+
 export default function Navbar() {
     const router = useRouter();
     const pathname = usePathname();
     const [isAdmin, setIsAdmin] = useState(false);
+
+
 
     useEffect(() => {
         const checkAuth = () => {
@@ -24,6 +28,8 @@ export default function Navbar() {
             window.removeEventListener("admin-auth-change", checkAuth);
         };
     }, []);
+
+
 
     const handleLogout = () => {
         localStorage.removeItem("adminToken");
@@ -68,6 +74,8 @@ export default function Navbar() {
                         </Link>
                     )}
                 </div>
+
+
             </nav>
 
             {/* Mobile Bottom Navigation Bar - FIXED POSITION OUTSIDE NAV */}
@@ -99,6 +107,8 @@ export default function Navbar() {
                         <span>Sign In</span>
                     </Link>
                 )}
+
+
             </div>
         </>
     );

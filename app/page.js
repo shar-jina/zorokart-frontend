@@ -466,7 +466,8 @@ export default function Home() {
         </div>
       </section>
       <div className="w-full h-px bg-black opacity-5"></div>
-      <section id="how-to-register" className="pt-16 pb-32 px-32 lg:px-24 relative overflow-hidden bg-white reveal">
+      <section id="how-to-register" className="pt-16 pb-32 px-6 lg:px-24 relative overflow-hidden bg-white reveal">
+
         {/* Programmatic Background Decoration */}
         <div className="absolute inset-0 pointer-events-none opacity-40">
           <svg className="w-full h-[600px]" viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute', top: '-50px' }}>
@@ -537,7 +538,8 @@ export default function Home() {
       <div className="w-full h-px bg-black opacity-5"></div>
       {/* NEW PAYMENT SECTION */}
       <section id="payment-section" className="w-full bg-brand-green text-white" style={{ paddingTop: '150px', paddingBottom: '80px' }}>
-        <div className="max-w-7xl mx-auto px-12 lg:px-48 text-center">
+        <div className="max-w-7xl mx-auto px-6 lg:px-48 text-center">
+
           <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase tracking-widest" style={{ fontFamily: "'Poppins', sans-serif" }}>Complete your payment</h2>
           <p className="text-xl text-white font-regular mb-20 max-w-2xl mx-auto" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "18px" }}>
             Just pay a small fee, and once it's done, an invoice will be sent <br /> directly to your WhatsApp. No waiting, no confusion!
@@ -578,7 +580,7 @@ export default function Home() {
       {/* WHY US SECTION - REDESIGNED TO MATCH MISSION SECTION */}
       <section id="why-us" className="py-32 px-6 lg:px-24 text-center reveal" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className=" font-bold text-brand-green mb-16 uppercase tracking-widest" style={{ fontFamily: "'Poppins', sans-serif", fontSize: '50px' }}>Why Us</h2>
+          <h2 className="font-bold text-brand-green mb-16 uppercase tracking-widest" style={{ fontFamily: "'Poppins', sans-serif", fontSize: '50px' }}>Why Us</h2>
           <div className="relative rounded-[40px] overflow-hidden mb-16 shadow-2xl border-[12px] border-white mx-auto aspect-video" style={{ maxWidth: '500px', height: "400px" }}>
             <iframe
               className="w-full h-full"
@@ -589,7 +591,7 @@ export default function Home() {
               allowFullScreen
             ></iframe>
           </div>
-          <p className="text-black font-regular py-10 px-24 text-xl leading-relaxed" style={{ fontFamily: "'Poppins', sans-serif", fontSize: '18px' }}>
+          <p className="text-black font-regular py-10 px-10 lg:px-32 text-xl leading-relaxed text-center" style={{ fontFamily: "'Poppins', sans-serif", fontSize: '18px' }}>
             Not Factory-Made, Only Home-Cooked: Authentic, high-quality traditional dishes made just for you.
             Women-Led, Pristine Kitchens: Prepared by homemakers in highly hygienic and clean home environments.
             Fresh and Hot: Every meal is prepared fresh upon order and delivered steaming hot to your doorstep.
@@ -597,8 +599,8 @@ export default function Home() {
             Reliable Local Service: Trustworthy service from the homemakers in your own neighborhood.
             Infused with a Mother's Love: More than just a meal; it is a service built on the care, love, and trust of a mother.
           </p>
-
         </div>
+
       </section>
       <div className="w-full h-px bg-black opacity-5"></div>
       {/* QUESTIONS SECTION */}
