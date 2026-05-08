@@ -986,6 +986,13 @@ body {
     color: #ffffff !important;
 }
 
+[data-theme='dark'] .step-card:hover h2,
+[data-theme='dark'] .step-card:hover p,
+[data-theme='dark'] .step-card:hover div {
+    color: #0f172a !important;
+}
+
+
 /* --- ULTRA-AGGRESSIVE DARK MODE BACKGROUND FIX --- */
 [data-theme='dark'],
 [data-theme='dark'] body,

@@ -450,3 +450,66 @@
         font-size: 1.5rem;
     }
 }
+
+/* --- Dark Mode Overrides for Register Page --- */
+[data-theme='dark'] .register-container {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+[data-theme='dark'] .registration-card {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+[data-theme='dark'] .registration-card h2,
+[data-theme='dark'] .registration-card p.subtitle,
+[data-theme='dark'] .form-group label {
+    color: #f8fafc !important;
+}
+
+[data-theme='dark'] .form-group input,
+[data-theme='dark'] .form-group select,
+[data-theme='dark'] .phone-input-wrapper {
+    background-color: #0f172a !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+[data-theme='dark'] .country-code {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+[data-theme='dark'] .step-number {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border: 2px solid white !important;
+    color: white !important;
+}
+
+[data-theme='dark'] .step-item.active .step-number {
+    background-color: white !important;
+    color: #4CAF50 !important;
+}
+
+[data-theme='dark'] .step-line {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-theme='dark'] .step-line.filled {
+    background-color: white !important;
+}
+
+[data-theme='dark'] .register-header {
+    background-color: #4CAF50 !important;
+    color: white !important;
+}
+
+[data-theme='dark'] .check-in-title,
+[data-theme='dark'] .step-item div {
+    color: white !important;
+}
+
+
