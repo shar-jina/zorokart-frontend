@@ -242,7 +242,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="w-full h-px bg-black opacity-5"></div>
+      <div className="hidden md:block w-full h-px bg-black opacity-5"></div>
       {/* ABOUT US - FORCED GREEN BACKGROUND */}
       <section id="about" style={{ backgroundColor: '#42A147' }} className="py-32 text-center text-white relative z-30 reveal">
         <div className="max-w-6xl mx-auto flex flex-col items-center">
@@ -273,7 +273,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <div className="w-full h-px bg-black opacity-5"></div>
+      <div className="hidden md:block w-full h-px bg-black opacity-5"></div>
       {/* RESTORED BOTTOM SECTIONS */}
       <section className="py-32 px-6 lg:px-24 text-center reveal">
         <div className="max-w-5xl mx-auto">
@@ -309,7 +309,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="w-full h-px bg-black opacity-5"></div>
+      <div className="hidden md:block w-full h-px bg-black opacity-5"></div>
       <section className="pt-16 pb-32 px-6 lg:px-24 bg-white reveal">
         <div className="max-w-7xl mx-auto">
           <h2 className="lg:hidden font-bold text-brand-green mb-8 uppercase tracking-widest text-center" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "50px" }}>What Makes us Special</h2>
@@ -354,7 +354,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="w-full h-px bg-black opacity-5"></div>
+      <div className="hidden md:block w-full h-px bg-black opacity-5"></div>
       <section className="pt-16 pb-32 px-6 lg:px-24 bg-white reveal">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-bold text-brand-green mb-20 text-center uppercase tracking-widest" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "50px" }}>Get to know us</h2>
@@ -495,7 +495,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="w-full h-px bg-black opacity-5"></div>
+      <div className="hidden md:block w-full h-px bg-black opacity-5"></div>
       <section id="how-to-register" className="pt-16 pb-32 px-6 lg:px-24 relative overflow-hidden bg-white reveal">
 
         {/* Programmatic Background Decoration */}
@@ -565,7 +565,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="w-full h-px bg-black opacity-5"></div>
+      <div className="hidden md:block w-full h-px bg-black opacity-5"></div>
       {/* NEW PAYMENT SECTION */}
       <section id="payment-section" className="w-full bg-brand-green text-white" style={{ paddingTop: '150px', paddingBottom: '80px' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-48 text-center">
@@ -597,16 +597,17 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row flex-wrap items-center justify-center gap-4 md:gap-10 mt-12">
-            <Link href="/register" className="bg-white text-brand-green px-32 py-5 rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-lg flex items-center justify-center no-underline" style={{ fontFamily: "'Poppins', sans-serif", textDecoration: 'none' }}>
+            <Link href="/register" className="bg-white text-brand-green px-12 md:px-32 py-5 rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-lg flex items-center justify-center no-underline whitespace-nowrap" style={{ fontFamily: "'Poppins', sans-serif", textDecoration: 'none' }}>
               Pay Now
             </Link>
+
             <button className="px-6 md:px-8 py-3 md:py-4 text-white font-normal text-lg md:text-xl hover:opacity-80 transition-all border-none bg-transparent whitespace-nowrap" style={{ fontFamily: "'Poppins', sans-serif" }}>
               View Receipt
             </button>
           </div>
         </div>
       </section>
-      <div className="w-full h-px bg-black opacity-5"></div>
+      <div className="hidden md:block w-full h-px bg-black opacity-5"></div>
       {/* WHY US SECTION - REDESIGNED TO MATCH MISSION SECTION */}
       <section id="why-us" className="py-32 px-6 lg:px-24 text-center reveal" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-5xl mx-auto">
@@ -632,7 +633,7 @@ export default function Home() {
         </div>
 
       </section>
-      <div className="w-full h-px bg-black opacity-5"></div>
+      <div className="hidden md:block w-full h-px bg-black opacity-5"></div>
       {/* QUESTIONS SECTION */}
       <section id="questions" className="pt-16 pb-32 px-6 lg:px-24 bg-white reveal">
         <div className="max-w-6xl mx-auto">
@@ -648,7 +649,7 @@ export default function Home() {
               <p className="text-lg text-black leading-relaxed font-medium " style={{ fontFamily: "'Poppins', sans-serif" }}>
                 There's a small fee to get started. Once you pay, your invoice goes straight to your WhatsApp. No hidden costs, no surprises
               </p>
-              <div className="mt-12 mx-auto md:mx-0" style={{ borderBottom: '2px solid #000000', width: '200px' }}></div>
+              <div className="hidden md:block mt-12 mx-auto md:mx-0" style={{ borderBottom: '2px solid #000000', width: '200px' }}></div>
             </div>
 
             <div className="pb-16" style={{ paddingLeft: '80px', fontFamily: "'Poppins', sans-serif" }}>
@@ -656,7 +657,7 @@ export default function Home() {
               <p className="text-lg text-black leading-relaxed font-medium" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 After registration and payment are complete, you're in. Customers will find you and orders will come. Start cooking.
               </p>
-              <div className="mt-12 mx-auto md:mx-0" style={{ borderBottom: '2px solid #000000', width: '200px' }}></div>
+              <div className="hidden md:block mt-12 mx-auto md:mx-0" style={{ borderBottom: '2px solid #000000', width: '200px' }}></div>
             </div>
 
             {/* ROW 2 */}

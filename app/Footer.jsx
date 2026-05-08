@@ -30,7 +30,7 @@ export default function Footer() {
                         <Link href="/" style={{ display: 'inline-block', marginBottom: '12px', textDecoration: 'none' }}>
                             <Image src="/images/logo.png" alt="Akshaya Vahini" width={60} height={30} className="object-contain" />
                         </Link>
-                        <h3 className="footer-logo-title" style={{ fontSize: '15px', fontWeight: 'bold', marginBottom: '4px', textTransform: 'uppercase', lineHeight: '1.2' }}>AKSHAYA VAAHINI</h3>
+                        <h3 className="footer-logo-title" style={{ fontSize: '15px', fontWeight: 'bold', marginBottom: '4px', textTransform: 'uppercase', lineHeight: '1.2' }}>AKSHAYAVAHINI</h3>
                         <p style={{ fontSize: '11px', fontWeight: '500', textTransform: 'uppercase' }}>
                             From Our kitchen to Your Heart
                         </p>
