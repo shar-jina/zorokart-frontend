@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faCheck, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
@@ -13,6 +15,8 @@ export default function Home() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollRotation, setScrollRotation] = useState(0);
   const [isMissionHovered, setIsMissionHovered] = useState(false);
+  const router = useRouter();
+
 
   useEffect(() => {
     const handleScroll = (e) => {
@@ -98,10 +102,26 @@ export default function Home() {
                     style={{ border: 'none', outline: 'none', fontFamily: "'Poppins', sans-serif" }}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        router.push(email ? `/register?email=${email}` : '/register');
+                      }
+
+                    }}
+
                   />
-                  <button className="bg-[#42A147] text-white font-bold py-3.5 px-14 rounded-10px hover:bg-green-700 transition-all text-xl" style={{ backgroundColor: '#42A147', fontFamily: "'Poppins', sans-serif" }}>
-                    Register
-                  </button>
+                  <Link href={email ? `/register?email=${email}` : "/register"} style={{ textDecoration: 'none' }}>
+                    <button 
+                      className="bg-[#42A147] text-white font-bold py-3.5 px-14 rounded-10px hover:bg-green-700 transition-all text-xl" 
+                      style={{ backgroundColor: '#42A147', fontFamily: "'Poppins', sans-serif" }}
+                    >
+                      Register
+                    </button>
+                  </Link>
+
+
+
+
                 </div>
 
                 <div className="flex flex-col mt-10">
@@ -243,8 +263,10 @@ export default function Home() {
                 border: '1px solid white',
                 cursor: 'pointer',
                 transition: 'none',
-                WebkitTapHighlightColor: 'transparent'
+                WebkitTapHighlightColor: 'transparent',
+                whiteSpace: 'nowrap'
               }}
+
             >
               Read more about us &gt;
             </span>
@@ -276,8 +298,10 @@ export default function Home() {
                   border: '1px solid black',
                   cursor: 'pointer',
                   transition: 'none',
-                  WebkitTapHighlightColor: 'transparent'
+                  WebkitTapHighlightColor: 'transparent',
+                  whiteSpace: 'nowrap'
                 }}
+
               >
                 Read more about us &gt;
               </span>
@@ -318,8 +342,10 @@ export default function Home() {
                     border: '1px solid black',
                     cursor: 'pointer',
                     transition: 'none',
-                    WebkitTapHighlightColor: 'transparent'
+                    WebkitTapHighlightColor: 'transparent',
+                    whiteSpace: 'nowrap'
                   }}
+
                 >
                   Explore Our Vision &gt;
                 </span>
@@ -358,10 +384,11 @@ export default function Home() {
                   userSelect: 'none',
                   backgroundColor: activeTab === "story" ? "#BDEACD" : "transparent",
                   color: "#42A147", // Brand Green
-                  transform: activeTab === "story" ? "scale(1.05)" : "scale(1)"
+                  transform: activeTab === "story" ? "scale(1.05)" : "scale(1)",
+                  whiteSpace: 'nowrap'
                 }}
               >
-                Benifits {activeTab === "story" && "→"}
+                Benefits {activeTab === "story" && "→"}
               </button>
               <button
                 onClick={() => setActiveTab("values")}
@@ -384,10 +411,11 @@ export default function Home() {
                   userSelect: 'none',
                   backgroundColor: activeTab === "values" ? "#BDEACD" : "transparent",
                   color: "#42A147", // Brand Green
-                  transform: activeTab === "values" ? "scale(1.05)" : "scale(1)"
+                  transform: activeTab === "values" ? "scale(1.05)" : "scale(1)",
+                  whiteSpace: 'nowrap'
                 }}
               >
-                Buisness {activeTab === "values" && "→"}
+                Our Values {activeTab === "values" && "→"}
               </button>
             </div>
 
@@ -449,8 +477,10 @@ export default function Home() {
                       border: '1px solid black',
                       cursor: 'pointer',
                       transition: 'none',
-                      WebkitTapHighlightColor: 'transparent'
+                      WebkitTapHighlightColor: 'transparent',
+                      whiteSpace: 'nowrap'
                     }}
+
                   >
                     Read more &gt;
                   </span>

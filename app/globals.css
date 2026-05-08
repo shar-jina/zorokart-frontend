@@ -1103,6 +1103,24 @@ html body .theme-toggle-btn {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
 }
 
+/* Navbar & Mobile Bottom Nav Dark Mode */
+[data-theme='dark'] .nav-container,
+[data-theme='dark'] .mobile-bottom-nav {
+    background-color: #0f172a !important; /* Matches main dark theme */
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+[data-theme='dark'] .nav-links a,
+[data-theme='dark'] .mobile-nav-item {
+    color: #ffffff !important;
+}
+
+[data-theme='dark'] .mobile-nav-item.active {
+    color: #42A147 !important;
+}
+
+
 
 
 
