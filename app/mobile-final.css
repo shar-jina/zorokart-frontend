@@ -1,0 +1,82 @@
+
+/* --- Responsive Utility Classes --- */
+.hidden { display: none !important; }
+
+@media (min-width: 1024px) {
+    .lg\:hidden { display: none !important; }
+    .lg\:flex { display: flex !important; }
+    .lg\:block { display: block !important; }
+}
+
+/* --- Mobile Bottom Navigation --- */
+.mobile-bottom-nav { 
+    display: none; /* Hidden on Desktop */
+}
+
+@media (max-width: 1024px) {
+    .mobile-bottom-nav { 
+        display: flex !important; 
+        position: fixed !important; 
+        bottom: 0 !important; 
+        left: 0 !important; 
+        right: 0 !important; 
+        height: 75px !important; 
+        background: #ffffff !important; 
+        justify-content: space-around !important; 
+        align-items: center !important; 
+        border-top: 1px solid #e2e8f0 !important; 
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1) !important; 
+        z-index: 10000 !important; 
+        padding-bottom: env(safe-area-inset-bottom) !important; 
+    }
+
+    .mobile-nav-item { 
+        display: flex !important; 
+        flex-direction: column !important; 
+        align-items: center !important; 
+        justify-content: center !important; 
+        text-decoration: none !important; 
+        color: #64748b !important; 
+        gap: 4px !important; 
+        font-size: 11px !important; 
+        font-weight: 500 !important; 
+        flex: 1 !important; 
+        height: 100% !important; 
+        background: transparent !important; 
+        border: none !important; 
+    }
+
+    .mobile-nav-item svg { 
+        font-size: 22px !important; 
+    }
+
+    .mobile-nav-item.active { 
+        color: #42A147 !important; 
+    }
+
+    /* Adjust main content padding on mobile */
+    main { 
+        padding-bottom: 90px !important; 
+    }
+
+    /* Fixed top header on mobile */
+    .nav-container { 
+        height: 60px !important; 
+        padding: 0 15px !important; 
+        background-color: #ffffff !important; 
+        border-bottom: 1px solid #e2e8f0 !important; 
+        position: fixed !important; 
+        top: 0 !important; 
+        left: 0 !important; 
+        right: 0 !important; 
+        display: flex !important; 
+        align-items: center !important; 
+        justify-content: space-between !important; 
+        z-index: 9999 !important; 
+    }
+
+    .nav-container img { 
+        max-width: 90px !important; 
+        height: auto !important; 
+    }
+}

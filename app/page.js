@@ -73,16 +73,10 @@ export default function Home() {
   return (
     <main className="bg-white overflow-x-hidden">
       {/* HERO SECTION */}
-      <section style={{
-        position: 'relative',
-        width: '100%',
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        background: 'white',
-        overflow: 'visible'
-      }}>
-        <div style={{ paddingTop: '120px', width: '100%', height: '100%', display: 'flex', alignItems: 'center' }}>
+      <section className="hero-section-wrapper">
+
+        <div className="hero-container-inner">
+
           <div className="container mx-auto px-6 lg:px-12 relative z-20 w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
 
@@ -294,15 +288,19 @@ export default function Home() {
       <div className="w-full h-px bg-black opacity-5"></div>
       <section className="pt-16 pb-32 px-6 lg:px-24 bg-white reveal">
         <div className="max-w-7xl mx-auto">
-          <div style={{ display: "flex", flexDirection: "row", gap: "80px", alignItems: "center" }}>
+          <h2 className="lg:hidden font-bold text-brand-green mb-8 uppercase tracking-widest text-center" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "50px" }}>What Makes us Special</h2>
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 items-center">
+
+
             {/* LEFT SIDE - IMAGE */}
             <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-[12px] border-white" style={{ flex: "1" }}>
               <Image src="/images/Web5.png" alt="Features" width={500} height={400} className="w-full object-cover aspect-[4/3]" />
             </div>
 
             {/* RIGHT SIDE - CONTENT */}
-            <div className="text-left" style={{ flex: "2" }}>
-              <h2 className=" font-bold text-brand-green mb-8 uppercase tracking-widest" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "50px" }}>What Makes us Special</h2>
+            <div className="text-left flex-1 lg:flex-[2]">
+              <h2 className="hidden lg:block font-bold text-brand-green mb-8 uppercase tracking-widest" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "50px" }}>What Makes us Special</h2>
+
               <h3 className="text-black text-3xl font-semibold mb-6" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "22px" }}>Ensuring food safety and quality.</h3>
               <p className="text-black mb-12 text-xl leading-relaxed" style={{ fontFamily: "'Poppins', sans-serif", fontSize: '18px' }}>
                 No frozen or stale food. Everything is prepared fresh in a homemaker’s kitchen, not in an industrial factory Prepared in hygienic home kitchens and delivered in high-quality, food-grade or stainless steel containers, our meals stay hot and safe. This eco-friendly and sustainable approach eliminates plastic usage and prevents food contamination, ensuring a healthier choice for you and the planet
@@ -335,7 +333,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <h2 className="font-bold text-brand-green mb-20 text-center uppercase tracking-widest" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "50px" }}>Get to know us</h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start" style={{ display: 'grid', gridTemplateColumns: '280px 1.2fr 0.8fr' }}>
+          <div className="get-to-know-us-grid">
+
             {/* 1st DIV - BUTTONS */}
             <div className="flex flex-col gap-4 pt-10">
               <button

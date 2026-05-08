@@ -24,9 +24,9 @@ export default function Footer() {
 
             <div className="max-w-7xl mx-auto" style={{ paddingTop: '64px' }}>
                 {/* Unified 5-Column Grid */}
-                <div style={{ display: 'grid', gridTemplateColumns: '200px repeat(4, 1fr)', gap: '48px 32px', marginBottom: '64px' }}>
-                    {/* Row 1 */}
-                    <div style={{ gridColumn: '1' }}>
+                <div className="footer-grid">
+                    {/* Column 1 - Brand */}
+                    <div className="footer-col-1">
                         <Link href="/" style={{ display: 'inline-block', marginBottom: '12px', textDecoration: 'none' }}>
                             <Image src="/images/logo.png" alt="Akshaya Vahini" width={60} height={30} className="object-contain" />
                         </Link>
@@ -36,7 +36,8 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div style={{ gridColumn: '2', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingLeft: '40px' }}>
+                    {/* Column 2 - About + Contact (Desktop Version) */}
+                    <div className="footer-col-2">
                         <h4 style={{ color: '#000000', fontWeight: 'bold', marginBottom: '8px', fontSize: '16px' }}>About us</h4>
                         <ul style={{ listStyleType: 'none', padding: 0, margin: 0, marginBottom: '16px', textAlign: 'left' }}>
                             <li style={{ marginBottom: '8px' }}><Link href="/#about" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>How it works</Link></li>
@@ -44,7 +45,61 @@ export default function Footer() {
                             <li style={{ marginBottom: '8px' }}><Link href="/#how-to-register" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>How to register</Link></li>
                         </ul>
 
-                        <h4 style={{ color: '#000000', fontWeight: 'bold', marginTop: '16px', marginBottom: '8px', fontSize: '16px', textAlign: 'left' }}>Contact Information</h4>
+                        {/* Hidden on Mobile - Keeps Desktop Design */}
+                        <div className="hidden lg:block">
+                            <h4 style={{ color: '#000000', fontWeight: 'bold', marginTop: '16px', marginBottom: '8px', fontSize: '16px', textAlign: 'left' }}>Contact Information</h4>
+                            <ul style={{ listStyleType: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
+                                <li style={{ display: 'flex', alignItems: 'center', position: 'relative', paddingLeft: '28px', marginBottom: '12px', marginLeft: '-28px' }}>
+                                    <FontAwesomeIcon icon={faMapMarkerAlt} style={{ color: '#000000', fontSize: '16px', width: '16px', position: 'absolute', left: 0 }} />
+                                    <span style={{ color: '#000000', fontWeight: '500', fontSize: '14px' }}>Kozhikode, Kerala</span>
+                                </li>
+                                <li style={{ display: 'flex', alignItems: 'center', position: 'relative', paddingLeft: '28px', marginBottom: '12px', marginLeft: '-28px' }}>
+                                    <FontAwesomeIcon icon={faEnvelope} style={{ color: '#000000', fontSize: '16px', width: '16px', position: 'absolute', left: 0 }} />
+                                    <span style={{ color: '#000000', fontWeight: '500', fontSize: '14px' }}>Support@Akshayavahini.com</span>
+                                </li>
+                                <li style={{ display: 'flex', alignItems: 'center', position: 'relative', paddingLeft: '28px', marginBottom: '12px', marginLeft: '-28px' }}>
+                                    <FontAwesomeIcon icon={faPhone} style={{ color: '#000000', fontSize: '16px', width: '16px', position: 'absolute', left: 0 }} />
+                                    <span style={{ color: '#000000', fontWeight: '500', fontSize: '14px' }}>+91 9876543216</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Column 3 - Quick Links */}
+                    <div className="footer-col-3">
+                        <h4 style={{ color: '#000000', fontWeight: 'bold', marginBottom: '24px', fontSize: '16px' }}>Quick links</h4>
+                        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                            <li style={{ marginBottom: '8px' }}><Link href="/register" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Vendor Registration</Link></li>
+                            <li style={{ marginBottom: '8px' }}><Link href="/register" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Agent Registration</Link></li>
+                            <li style={{ marginBottom: '8px' }}><Link href="/admin/login" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Vendor Login</Link></li>
+                            <li style={{ marginBottom: '8px' }}><Link href="/admin/login" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Agent Login</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Column 4 - Support */}
+                    <div className="footer-col-4">
+                        <h4 style={{ color: '#000000', fontWeight: 'bold', marginBottom: '24px', fontSize: '16px' }}>Support</h4>
+                        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                            <li style={{ marginBottom: '8px' }}><Link href="/#questions" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>FAQs</Link></li>
+                            <li style={{ marginBottom: '8px' }}><Link href="/contact" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Help Center</Link></li>
+                            <li style={{ marginBottom: '8px' }}><Link href="/contact" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Contact Us</Link></li>
+                            <li style={{ marginBottom: '8px' }}><Link href="/contact" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Report an Issue</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Column 5 - Legal */}
+                    <div className="footer-col-5">
+                        <h4 style={{ color: '#000000', fontWeight: 'bold', marginBottom: '24px', fontSize: '16px' }}>Legal</h4>
+                        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                            <li style={{ marginBottom: '8px' }}><Link href="/terms" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Terms & Conditions</Link></li>
+                            <li style={{ marginBottom: '8px' }}><Link href="/privacy" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Privacy policy</Link></li>
+                            <li style={{ marginBottom: '8px' }}><Link href="/user-agreement" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>User Agreement</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Contact Information (Mobile Only Version) */}
+                    <div className="footer-col-contact lg:hidden">
+                        <h4 style={{ color: '#000000', fontWeight: 'bold', marginBottom: '8px', fontSize: '16px', textAlign: 'left' }}>Contact Information</h4>
                         <ul style={{ listStyleType: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
                             <li style={{ display: 'flex', alignItems: 'center', position: 'relative', paddingLeft: '28px', marginBottom: '12px', marginLeft: '-28px' }}>
                                 <FontAwesomeIcon icon={faMapMarkerAlt} style={{ color: '#000000', fontSize: '16px', width: '16px', position: 'absolute', left: 0 }} />
@@ -61,36 +116,8 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div style={{ gridColumn: '3' }}>
-                        <h4 style={{ color: '#000000', fontWeight: 'bold', marginBottom: '24px', fontSize: '16px' }}>Quick links</h4>
-                        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                            <li style={{ marginBottom: '8px' }}><Link href="/register" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Vendor Registration</Link></li>
-                            <li style={{ marginBottom: '8px' }}><Link href="/register" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Agent Registration</Link></li>
-                            <li style={{ marginBottom: '8px' }}><Link href="/admin/login" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Vendor Login</Link></li>
-                            <li style={{ marginBottom: '8px' }}><Link href="/admin/login" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Agent Login</Link></li>
-                        </ul>
-                    </div>
-
-                    <div style={{ gridColumn: '4' }}>
-                        <h4 style={{ color: '#000000', fontWeight: 'bold', marginBottom: '24px', fontSize: '16px' }}>Support</h4>
-                        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                            <li style={{ marginBottom: '8px' }}><Link href="/#questions" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>FAQs</Link></li>
-                            <li style={{ marginBottom: '8px' }}><Link href="/contact" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Help Center</Link></li>
-                            <li style={{ marginBottom: '8px' }}><Link href="/contact" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Contact Us</Link></li>
-                            <li style={{ marginBottom: '8px' }}><Link href="/contact" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Report an Issue</Link></li>
-                        </ul>
-                    </div>
-
-                    <div style={{ gridColumn: '5' }}>
-                        <h4 style={{ color: '#000000', fontWeight: 'bold', marginBottom: '24px', fontSize: '16px' }}>Legal</h4>
-                        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                            <li style={{ marginBottom: '8px' }}><Link href="/terms" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Terms & Conditions</Link></li>
-                            <li style={{ marginBottom: '8px' }}><Link href="/privacy" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>Privacy policy</Link></li>
-                            <li style={{ marginBottom: '8px' }}><Link href="/user-agreement" style={{ color: '#000000', fontWeight: '500', fontSize: '14px', textDecoration: 'none' }}>User Agreement</Link></li>
-                        </ul>
-                    </div>
-
-                    <div style={{ gridColumn: '5' }}>
+                    {/* Socials */}
+                    <div className="footer-col-6">
                         <h4 style={{ color: '#000000', fontWeight: 'bold', marginBottom: '24px', fontSize: '16px', textAlign: 'left' }}>Follow us on</h4>
                         <div style={{ display: 'flex', gap: '20px', alignItems: 'center', justifyContent: 'flex-start' }}>
                             <Link href="#" style={{ textDecoration: 'none' }}>
